@@ -52,28 +52,28 @@ public class model_siswa implements com.controller.controller_siswa {
 
     @Override
     public void Ubah(form_siswa siswa) throws SQLException {
-//        if (siswa.rbLaki.isSelected()) {
-//            jk = "Laki-Laki";
-//        } else {
-//            jk = "Perempuan";
-//        }
-//        try {
-//            Connection con = koneksi.getcon();
-//            String sql = "UPDATE siswa SET nama=?, jenis_kelamin=?, jurusan=? WHERE NIS=?";
-//            PreparedStatement prepare = con.prepareStatement(sql);
-//            prepare.setString(4, siswa.txtNIS.getText());
-//            prepare.setString(1, siswa.txtNama.getText());
-//            prepare.setString(2, jk);
-//            prepare.setString(3, (String)siswa.cbJurusan.getSelectedItem());
-//            prepare.executeUpdate();
-//            JOptionPane.showMessageDialog(null, "Data Berhasil Di Ubah");
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        } finally {
-//            Tampil(siswa);
-//            siswa.setLebarKolom();
-//            Baru(siswa);
-//        }
+        if (siswa.rbLaki.isSelected()) {
+            jk = "Laki-Laki";
+        } else {
+            jk = "Perempuan";
+        }
+        try {
+            Connection con = koneksi.getcon();
+            String sql = "UPDATE siswa SET nama=?, jenis_kelamin=?, jurusan=? WHERE NIS=?";
+            PreparedStatement prepare = con.prepareStatement(sql);
+            prepare.setString(4, siswa.txtNIS.getText());
+            prepare.setString(1, siswa.txtNama.getText());
+            prepare.setString(2, jk);
+            prepare.setString(3, (String)siswa.cbJurusan.getSelectedItem());
+            prepare.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Di Ubah");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            Tampil(siswa);
+            siswa.setLebarKolom();
+            Baru(siswa);
+        }
     }
 
     @Override
