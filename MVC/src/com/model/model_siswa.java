@@ -96,25 +96,25 @@ public class model_siswa implements com.controller.controller_siswa {
 
     @Override
     public void Tampil(form_siswa siswa) throws SQLException {
-//        siswa.tblmodel.getDataVector().removeAllElements();
-//        siswa.tblmodel.fireTableDataChanged();
-//        
-//        try {
-//            Connection con = koneksi.getcon();
-//            Statement stt = con.createStatement();
-//            String sql = "SELECT * FROM siswa ORDER BY NIS ASC";
-//            ResultSet rs = stt.executeQuery(sql);
-//            while (rs.next()) {                
-//                Object[] ob = new Object[8];
-//                ob[0] = rs.getString(1);
-//                ob[1] = rs.getString(2);
-//                ob[2] = rs.getString(3);
-//                ob[3] = rs.getString(4);
-//                siswa.tblmodel.addRow(ob);
-//            }
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
+        siswa.tblmodel.getDataVector().removeAllElements();
+        siswa.tblmodel.fireTableDataChanged();
+        
+        try {
+            Connection con = koneksi.getcon();
+            Statement stt = con.createStatement();
+            String sql = "SELECT * FROM siswa ORDER BY NIS ASC";
+            ResultSet rs = stt.executeQuery(sql);
+            while (rs.next()) {                
+                Object[] ob = new Object[8];
+                ob[0] = rs.getString(1);
+                ob[1] = rs.getString(2);
+                ob[2] = rs.getString(3);
+                ob[3] = rs.getString(4);
+                siswa.tblmodel.addRow(ob);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         
     }
 
