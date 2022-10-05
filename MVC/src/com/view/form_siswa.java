@@ -23,6 +23,8 @@ public class form_siswa extends javax.swing.JFrame {
 
     public DefaultTableModel tblmodel;
       String header[] = {"NIS","Nama","Jenis Kelamin","Jurusan"};
+      
+    
 
     /**
      * Creates new form tampilan
