@@ -130,7 +130,13 @@ public class model_siswa implements com.controller.controller_siswa {
 
     @Override
     public void KlikTabel(form_siswa siswa) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
